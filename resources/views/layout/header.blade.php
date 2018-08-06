@@ -1,3 +1,3 @@
-<header id="header">
-	<a href="/" class="logo"><strong></strong> by HTML5 UP</a>
+<header id="header" style="padding-top: 30px;">
+	<a href="/" class="logo"><strong>{{setting('site.title')}}</strong></a>
 </header>
