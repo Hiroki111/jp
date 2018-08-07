@@ -18,3 +18,5 @@ Route::group(['prefix' => 'admin'], function () {
 });
 
 Route::get('/about', 'HomeController@showAbout');
+
+Route::get('/{url}', 'HomeController@show');

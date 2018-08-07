@@ -3567,3 +3567,10 @@ input, select, textarea {
 			margin-top: 0;
 			padding-top: 0;
 		}
+
+		.post_excerpt{
+    line-height: 1.5em;
+    height: 8em;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}

@@ -15,22 +15,23 @@
 </section>
 <!-- Section -->
 @foreach($categories as $category)
-<section>
+<section style="padding: 60px 0;">
     <header class="major">
-        <h2>{{$category->name}}</h2>
+        <h2 style="margin-bottom: 30px;">{{$category->name}}</h2>
     </header>
-    @foreach($category->posts as $post)
     <div class="posts">
+    @foreach($category->posts as $post)
         <article>
-            <a href="/{{$post->slug}}" class="image"></a>
-            <h3>{{$post->title}}</h3>
-            <p>Aenean ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed nulla amet lorem feugiat tempus aliquam.</p>
-            <ul class="actions">
-                <li><a href="#" class="button">More</a></li>
+            <h3 style="margin-bottom: 0px;"><a href="/{{$post->slug}}">{{$post->title}}</a></h3>
+            <div class="post_excerpt">
+                <p>{!! $post->body !!}</p>
+            </div>
+            <ul class="actions" style="margin-top: 15px;">
+                <li><a href="/{{$post->slug}}" class="button">More</a></li>
             </ul>
         </article>
-    </div>
     @endforeach
+    </div>
 </section>
 @endforeach
 
