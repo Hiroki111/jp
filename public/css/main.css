@@ -3574,3 +3574,20 @@ input, select, textarea {
     overflow: hidden;
     text-overflow: ellipsis; 
 }
+
+p,li{
+	color: black;
+}
+
+.my-sidebar > li > a, 
+.my-sidebar > li > span {
+	font-size: large !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.my-sidebar > li > ul > li > a {
+	font-size: 0.9em !important;
+	font-weight: bold !important;
+	color: black !important;	
+}

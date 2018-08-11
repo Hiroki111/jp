@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Category;
+use App\Job;
 use App\Page;
 use App\Post;
 use Illuminate\Http\Request;
@@ -49,6 +50,18 @@ class HomeController extends Controller
         return view('post', [
             'post'       => $post,
             'categories' => $this->category->all(),
+        ]);
+    }
+
+    public function showJobs()
+    {
+        $post = $this->page->where('slug', '=', 'jobs')
+            ->first();
+        return view('jobs', [
+            'post'        => $post,
+            'categories'  => $this->category->all(),
+            'jobs'        => Job::getJobs(),
+            'authorities' => Job::getAuthorities(),
         ]);
     }
 
