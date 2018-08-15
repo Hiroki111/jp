@@ -36,9 +36,6 @@ class HomeController extends Controller
     public function index()
     {
         return view('index', [
-            // 'posts'      => $this->post->published()
-            //     ->orderBy('id', 'dec')
-            //     ->paginate(5),
             'categories' => $this->category->all(),
         ]);
     }

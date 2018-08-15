@@ -1,21 +1,17 @@
 $(document).ready(function() {
 	$("#jobtitle").keyup(function() {
-		console.log('jobtitle', $('#jobtitle').val());
 		filterJobs();
 	});
 
 	$("#joblist").change(function() {
-		console.log('joblist', $('#joblist').val());
 		filterJobs();
 	});
 
 	$("#authorities").change(function() {
-		console.log('authorities', $('#authorities').val());
 		filterJobs();
 	});
 
 	function filterJobs() {
-		console.log('filterJobs');
 		$('.jobs tr').each(function() {
 			var showThisRow = true;
 
@@ -35,7 +31,6 @@ $(document).ready(function() {
 			}
 
 			if ($('#authorities').val()) {
-				console.log($('#authorities').val(), $(this).find('td:nth-child(4)').html());
 				if ($('#authorities').val() !== $(this).find('td:nth-child(4)').html()) {
 					showThisRow = false;
 				}

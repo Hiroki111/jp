@@ -1,7 +1,7 @@
 @extends('layout.master')
 
 @section('content')
-<section id="banner" style="max-height: 450px;">
+<section id="banner" style="padding: 3em 0 3em 0;">
     <div class="content">
         <header>
             <h1 style="font-size: 2em;">{{setting('site.title')}}</h1>
@@ -9,13 +9,13 @@
         <p>{{setting('site.description')}}</p>
         <a href="/about" class="button">初めての方はこちらから</a>
     </div>
-    <span class="image object">
+    <span class="image object" style="max-height: 250px;">
         <img src="images/top.jpg" alt="" />
     </span>
 </section>
 <!-- Section -->
 @foreach($categories as $category)
-<section style="padding: 60px 0;">
+<section style="padding: 30px 0;">
     <header class="major">
         <h2 style="margin-bottom: 30px;">{{$category->name}}</h2>
     </header>

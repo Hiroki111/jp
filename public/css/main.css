@@ -167,7 +167,7 @@ input, select, textarea {
 			}
 
 	strong, b {
-		color: #3d4449;
+		/*color: #3d4449;*/
 		font-weight: 600;
 	}
 
@@ -3590,4 +3590,14 @@ p,li{
 	font-size: 0.9em !important;
 	font-weight: bold !important;
 	color: black !important;	
+}
+
+.my-tbody > tr > td {
+	color: black;
+	background-color:white;
+	border-right: solid 1px black;
+}
+
+.post_body_div strong {
+    font-weight: 900 !important;
 }

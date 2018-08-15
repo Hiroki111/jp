@@ -222,7 +222,7 @@ return [
     ["ICT品質保証エンジニア	", "	ICT Quality Assurance Engineer	", "STSOL", "	ACS	"],
     ["ICT営業担当者	", "	ICT Sales Representative	", "STSOL", "VETASSESS"],
     ["ICTセキュリティスペシャリスト	", "	ICT Security Specialist	", "MLTSSL", "	ACS	"],
-    ["ICTサポートとテストエンジニア", "	ICT Support and Test Engineers nec	", "STSOL", "	ACS	"],
+    ["ICTサポート/テストエンジニア", "	ICT Support and Test Engineers nec	", "STSOL", "	ACS	"],
     ["ICTサポートエンジニア	", "	ICT Support Engineer	", "STSOL", "	ACS	"],
     ["ICTサポート技術者nec 	", "	ICT Support Technicians nec	", "STSOL", "	TRA	"],
     ["ICTシステムテストエンジニア	", "	ICT Systems Test Engineer	", "STSOL", "	ACS	"],
