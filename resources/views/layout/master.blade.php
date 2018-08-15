@@ -15,9 +15,9 @@
 
     <title>{{setting('site.title')}}</title>
 </head>
-<body class="is-preload" style="overflow-y: hidden;">
+<body class="is-preload" >
     <div id="wrapper">
-        <div id="main" style="overflow-x: scroll; height: 100vh; width: 100vw;">
+        <div id="main" style="overflow-x: scroll; ">
             <div class="inner" style="padding: 0 4em 0.1em 4em;">
                 @yield('content')
             </div>

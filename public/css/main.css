@@ -3601,3 +3601,20 @@ p,li{
 .post_body_div strong {
     font-weight: 900 !important;
 }
+
+#visa-table,
+#visa-table th,
+#visa-table tr,
+#visa-table td {
+	border: 1px solid black;
+	background-color: white !important;
+	color: black !important;
+}
+
+#visa-table th {
+	font-weight: bold;
+}
+
+#visa-table p {
+	margin-bottom: 0px;
+}
