@@ -50,6 +50,16 @@ class HomeController extends Controller
         ]);
     }
 
+    public function showAuthor()
+    {
+        $post = $this->page->where('slug', '=', 'author')
+            ->first();
+        return view('post', [
+            'post'       => $post,
+            'categories' => $this->category->all(),
+        ]);
+    }
+
     public function showJobs()
     {
         $post = $this->page->where('slug', '=', 'jobs')
@@ -78,7 +88,7 @@ class HomeController extends Controller
             ->first();
         $next = $this->post->where('id', '>', $post->id)
             ->published()
-            ->orderBy('id', 'dec')
+            ->orderBy('id', 'asc')
             ->first();
 
         return view('post', [
