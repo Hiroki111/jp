@@ -38,7 +38,7 @@
         </nav>
         <!-- Footer -->
         <footer id="footer">
-            <p class="copyright">&copy; {{setting('site.title')}} All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+            <p class="copyright">&copy; {{setting('site.title')}} All rights reserved.</p>
         </footer>
 
     </div>

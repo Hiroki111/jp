@@ -13,7 +13,11 @@
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
 
+    @if(url()->current() ===  env('APP_URL')|| empty($post))
     <title>{{setting('site.title')}}</title>
+    @else
+    <title>{{$post->title}} | {{setting('site.title')}}</title>
+    @endif
 </head>
 <body class="is-preload" >
     <div id="wrapper">
