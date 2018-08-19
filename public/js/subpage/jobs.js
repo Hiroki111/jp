@@ -7,7 +7,7 @@ $(document).ready(function() {
 		filterJobs();
 	});
 
-	$("#authorities").change(function() {
+	$("#visas").change(function() {
 		filterJobs();
 	});
 
@@ -30,8 +30,10 @@ $(document).ready(function() {
 				}
 			}
 
-			if ($('#authorities').val()) {
-				if ($('#authorities').val() !== $(this).find('td:nth-child(4)').html()) {
+			if ($('#visas').val()) {
+				var visa = $('#visas').val();
+				var visaList = $(this).find('td:nth-child(4)').html();
+				if (!visaList.includes(visa)) {
 					showThisRow = false;
 				}
 			}

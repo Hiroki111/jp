@@ -13,24 +13,27 @@
 		{!!$post->body!!}
 		<div class="row gtr-uniform" style="padding-bottom: 60px;">
 			<div class="col-4 col-12-small">
-				<h4>職業名（日本語・英語のどちらでも可）</h4>
+				<h4 style="padding-left: 15px; height: 24px;">職業名</h4>
+				<h4>（日本語・英語のどちらでも可）</h4>
 				<input id="jobtitle" type="text" name="" placeholder="入力してください">
 			</div>
 			<div class="col-4 col-12-small">
+				<h4 style="height: 24px;"></h4>
 				<h4>職業リスト</h4>
 				<select id="joblist">
 					<option value="">全て選択</option>
-					<option value="MLTSSL">MLTSSL(長期就労ビザ)</option>
-					<option value="STSOL">STSOL(短期就労ビザ)</option>
-					<option value="Regional">ROL(地方就労ビザ)</option>
+					<option value="MLTSSL">MLTSSL(中・長期計画的技術リスト)</option>
+					<option value="STSOL">STSOL(短期的職業リスト)</option>
+					<option value="Regional">ROL(地方職業リスト)</option>
 				</select>
 			</div>
 			<div class="col-4 col-12-small">
-				<h4>ビザ認可団体</h4>
-				<select id="authorities">
+				<h4 style="height: 24px;"></h4>
+				<h4>関連するビザ</h4>
+				<select id="visas">
 					<option value="">全て選択</option>
-					@foreach($authorities as $authority)
-					<option value="{{$authority}}">{{$authority}}</option>
+					@foreach($visas as $key => $visa)
+					<option value="{{$key}}">{{$visa}}</option>
 					@endforeach
 				</select>
 			</div>
@@ -41,7 +44,7 @@
 					<th>職業名（原文）</th>
 					<th>職業名</th>
 					<th>リスト</th>
-					<th>ビザ認可団体(Assessing Authority)</th>
+					<th>関連するビザ</th>
 				</tr>
 			</thead>
 			<tbody class="jobs">
@@ -50,7 +53,7 @@
 					<td class="en_jobtitle">{{$job[1]}}</td>
 					<td class="jp_jobtitle">{{$job[0]}}</td>
 					<td class="joblist">{{$job[2]}}</td>
-					<td class="authorities">{{$job[3]}}</td>
+					<td class="visas">{{$job[3]}}</td>
 				</tr>
 				@endforeach
 			</tbody>

@@ -20,5 +20,7 @@ Route::group(['prefix' => 'admin'], function () {
 Route::get('/about', 'HomeController@showAbout');
 Route::get('/author', 'HomeController@showAuthor');
 Route::get('/jobs', 'HomeController@showJobs');
+Route::get('/contact', 'HomeController@showContact');
+Route::post('/query', 'HomeController@sendQuery');
 
 Route::get('/{url}', 'HomeController@show');

@@ -14,15 +14,15 @@
     </span>
 </section>
 <!-- Section -->
-@foreach($categories as $category)
+@foreach($categories as $i => $category)
 <section style="padding: 30px 0;">
     <header class="major">
-        <h2 style="margin-bottom: 30px;">{{$category->name}}</h2>
+        <h2 style="margin-bottom: 30px;">#{{$i+1}}. {{$category->name}}</h2>
     </header>
     <div class="posts">
-    @foreach($category->posts as $post)
+    @foreach($category->posts as $i => $post)
         <article>
-            <h3 style="margin-bottom: 0px;"><a href="/{{$post->slug}}">{{$post->title}}</a></h3>
+            <h3 style="margin-bottom: 0px;"><a href="/{{$post->slug}}">{{$i+1}}. {{$post->title}}</a></h3>
             <div class="post_excerpt">
                 <p>{!! $post->body !!}</p>
             </div>

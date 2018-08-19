@@ -7,6 +7,7 @@ use App\Job;
 use App\Page;
 use App\Post;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class HomeController extends Controller
 {
@@ -68,6 +69,7 @@ class HomeController extends Controller
             'post'        => $post,
             'categories'  => $this->category->all(),
             'jobs'        => Job::getJobs(),
+            'visas'       => Job::getVisas(),
             'authorities' => Job::getAuthorities(),
         ]);
     }
@@ -108,5 +110,26 @@ class HomeController extends Controller
                 ->paginate(5),
             'categories' => $this->category->all(),
         ]);
+    }
+
+    public function showContact()
+    {
+        return view('contact', [
+            'categories' => $this->category->all(),
+        ]);
+    }
+
+    public function sendQuery()
+    {
+        $data = $this->request->all();
+
+        Mail::send('query', $data, function ($message) {
+            $message->from('query@jpsite.com', "Query From JPsite");
+            $message->to(env('ADMIN_EMAIL'));
+        });
+
+        return redirect()->action('HomeController@showContact')
+            ->with('status', '送信されました。');
+
     }
 }

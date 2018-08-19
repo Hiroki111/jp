@@ -17,6 +17,7 @@
                 <li><a href="/" style="">Home</a></li>
                 <li><a href="/about" style="font-weight: bold;">このサイトについて</a></li>
                 <li><a href="/author" style="font-weight: bold;">著者について</a></li>
+                <li><a href="/contact" style="font-weight: bold;">お問い合わせ</a></li>
                 @foreach($categories as $category)
                 <li>
                     <span>{{$category->name}}</span>
@@ -30,7 +31,7 @@
                 <li>
                     <span>おまけ</span>
                     <ul style="display: block;">
-                        <li><a href="/jobs">オーストラリアで不足している職業</a></li>
+                        <li><a href="/jobs">オーストラリアで働きたい人必見、就労・永住ビザ職業リスト</a></li>
                     </ul>
                 </li>
             </ul>
