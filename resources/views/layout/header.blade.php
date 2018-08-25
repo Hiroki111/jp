@@ -1,3 +1,4 @@
-<header id="header" style="padding-top: 30px;">
-	<a href="/" class="logo"><strong>{{setting('site.title')}}</strong></a>
+<header id="header">
+	<a href="/" class="logo"><strong style="color: #3d4449;
+    font-weight: 800;">{{setting('site.title')}}</strong></a>
 </header>
